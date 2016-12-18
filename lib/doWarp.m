@@ -1,3 +1,7 @@
+% doWarp() - Warps image to match current esimate.current
+%
+% (C)opyright 2016, Ashton Fagg
+
 function varargout = doWarp(varargin)
     
     
@@ -12,7 +16,7 @@ function varargout = doWarp(varargin)
         refPts = varargin{3};   % Ground truth
         
     else
-        error('busted.');
+        error('Input arguments to doWarp do not make sense.');
     end
     
         

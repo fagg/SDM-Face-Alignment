@@ -5,7 +5,17 @@ This is my MATLAB implementation of the Supervised Descent Method (SDM) for face
 
 The included model is trained on the 300W dataset using 49 points (no jaw points).
 
-At the moment, this package provides code for face landmark registration only. The code for training will be released at a later time.
+Training code is included in the lib directory. Training should be a fairly straight-forward process.
+The functions for training are:
+
+- SDMInitModel - Allocates a new SDM model
+- SDMAddDataMemoryFrugal* - these functions gather the training and validation data in a memory efficient way
+for training and parameter selection.
+- SDMSolve - Solves for the regressor
+- SDMLayerXval - Performs parameter selection via a golden search (use for selecting regularizer)
+- SDMFinalizeLayer - Adds the final regressor to the SDM model.
+
+Review these functions for details on model structure, and how to provide a shape model (mean shape).
 
 ## Running the code
 
